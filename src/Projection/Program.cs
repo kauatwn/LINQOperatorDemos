@@ -24,3 +24,25 @@ foreach (var product in productProjection)
 {
     Console.WriteLine($"Id: {product.Id}, Nome: {product.Name}, Preço: {product.Price:C}");
 }
+
+var categories = new List<Category>
+{
+    new() { Id = 1, Name = "Fruit", Products = products },
+    new()
+    {
+        Id = 2, Name = "Vegetable", Products =
+        [
+            new Product { Id = 4, Name = "Carrot", Price = 0.80 },
+            new Product { Id = 5, Name = "Lettuce", Price = 1.00 }
+        ]
+    }
+};
+
+// Nested projection
+var allProducts = categories.SelectMany(c => c.Products);
+Console.WriteLine("\nTodos os produtos de todas as categorias:");
+
+foreach (var product in allProducts)
+{
+    Console.WriteLine($"Id: {product.Id}, Nome: {product.Name}, Preço: {product.Price:C}");
+}
