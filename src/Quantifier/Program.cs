@@ -1,4 +1,4 @@
-﻿using Quantification.Entities;
+﻿using Quantifier.Entities;
 
 var products = new List<Product>
 {
@@ -14,11 +14,6 @@ Console.WriteLine($"Existe algum produto em estoque? {anyInStock}");
 var allInStock = products.All(p => p.Stock > 0);
 Console.WriteLine($"Todos os produtos estão em estoque? {allInStock}");
 
-var expensiveProducts = products.Count(p => p.Price > 5000);
-Console.WriteLine($"Número de produtos com preço maior que R$ 5.000,00: {expensiveProducts}");
-
-var totalPrices = products.Sum(p => p.Price);
-Console.WriteLine($"Preço total de todos os produtos: {totalPrices:C}");
-
-var averagePrices = products.Average(p => p.Price);
-Console.WriteLine($"Preço médio dos produtos: {averagePrices:C}");
+const string productToCheck = "Apple iPhone 15";
+var containsProduct = products.Select(p => p.Name).Contains(productToCheck);
+Console.WriteLine($"O produto '{productToCheck}' está na lista? {containsProduct}");

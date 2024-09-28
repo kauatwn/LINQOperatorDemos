@@ -1,6 +1,6 @@
-﻿namespace Quantification.Entities;
+﻿namespace Quantifier.Entities;
 
-public class Product(string name, double price, int stock)
+internal class Product(string name, double price, int stock)
 {
     public string Name { get; set; } = name;
     public double Price { get; set; } = price;

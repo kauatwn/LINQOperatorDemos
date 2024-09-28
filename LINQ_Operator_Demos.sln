@@ -8,7 +8,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Filtering", "src\Filtering\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sorting", "src\Sorting\Sorting.csproj", "{1D64806E-98DE-4369-9B70-E626480AF2E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quantification", "src\Quantification\Quantification.csproj", "{0AB6EDED-FB38-4B1F-9D71-5DC84BF532DB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quantifier", "src\Quantifier\Quantifier.csproj", "{0AB6EDED-FB38-4B1F-9D71-5DC84BF532DB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
