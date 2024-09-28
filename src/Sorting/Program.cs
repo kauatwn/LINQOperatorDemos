@@ -2,11 +2,11 @@
 
 var people = new List<Person>
 {
-    new Person("John", "Doe", 25),
-    new Person("Alice", "Johnson", 22),
-    new Person("Michael", "Brown", 30),
-    new Person("Emily", "Smith", 27),
-    new Person("Bob", "Williams", 22)
+    new("John", "Doe", 25),
+    new("Alice", "Johnson", 22),
+    new("Michael", "Brown", 30),
+    new("Emily", "Smith", 27),
+    new("Bob", "Williams", 22)
 };
 
 // 1. Sort by name in ascending order
