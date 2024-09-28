@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Projection", "src\Projectio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Filtering", "src\Filtering\Filtering.csproj", "{70D572A7-3749-4396-9B3D-6E071DF6700A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sorting", "src\Sorting\Sorting.csproj", "{1D64806E-98DE-4369-9B70-E626480AF2E3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -14,6 +16,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{65D028FF-ACA3-44B6-B8E0-02B092A318C4} = {6DE51EEB-A944-475E-8C6D-4C4B69036613}
 		{70D572A7-3749-4396-9B3D-6E071DF6700A} = {6DE51EEB-A944-475E-8C6D-4C4B69036613}
+		{1D64806E-98DE-4369-9B70-E626480AF2E3} = {6DE51EEB-A944-475E-8C6D-4C4B69036613}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{65D028FF-ACA3-44B6-B8E0-02B092A318C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -24,5 +27,9 @@ Global
 		{70D572A7-3749-4396-9B3D-6E071DF6700A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70D572A7-3749-4396-9B3D-6E071DF6700A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{70D572A7-3749-4396-9B3D-6E071DF6700A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D64806E-98DE-4369-9B70-E626480AF2E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D64806E-98DE-4369-9B70-E626480AF2E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D64806E-98DE-4369-9B70-E626480AF2E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D64806E-98DE-4369-9B70-E626480AF2E3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
