@@ -8,12 +8,15 @@ var products = new List<Product>
     new("Xbox Series X", 4999.00, 0)
 };
 
+// 1. Any
 var anyInStock = products.Any(p => p.Stock > 0);
 Console.WriteLine($"Existe algum produto em estoque? {anyInStock}");
 
+// 2. All
 var allInStock = products.All(p => p.Stock > 0);
 Console.WriteLine($"Todos os produtos estão em estoque? {allInStock}");
 
+// 3. Contains
 const string productToCheck = "Apple iPhone 15";
 var containsProduct = products.Select(p => p.Name).Contains(productToCheck);
 Console.WriteLine($"O produto '{productToCheck}' está na lista? {containsProduct}");
