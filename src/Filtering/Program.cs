@@ -2,12 +2,12 @@
 
 var items = new List<object>
 {
-    new Product { Id = 1, Name = "Apple", Price = 1.20 },
-    new Product { Id = 2, Name = "Banana", Price = 2.40 },
-    new Product { Id = 3, Name = "Carrot", Price = 0.80 },
-    new Product { Id = 4, Name = "Lettuce", Price = 1.00 },
-    new Category { Id = 1, Name = "Fruit" },
-    new Category { Id = 2, Name = "Vegetable" }
+    new Product(1, "Apple", 1.20),
+    new Product(2, "Banana", 2.40),
+    new Product(3, "Carrot", 0.80),
+    new Product(4, "Lettuce", 1.00),
+    new Category(1, "Fruit"),
+    new Category(2, "Vegetable")
 };
 
 // Filtering
