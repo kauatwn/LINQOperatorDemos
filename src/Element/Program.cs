@@ -2,14 +2,14 @@
 
 var customers = new List<Customer>
 {
-    new(1,"John", 42),
-    new(2,"Alice", 30),
-    new(3,"Carol", 22),
-    new(4,"David", 35),
-    new(5,"Eve", 28),
-    new(6,"Frank", 45),
-    new(7,"Grace", 33),
-    new(8,"Helen", 40),
+    new(1, "John", 42),
+    new(2, "Alice", 30),
+    new(3, "Carol", 22),
+    new(4, "David", 35),
+    new(5, "Eve", 28),
+    new(6, "Frank", 45),
+    new(7, "Grace", 33),
+    new(8, "Helen", 40),
 };
 
 // 1. FirstOrDefault
@@ -41,5 +41,11 @@ var emptyList = new List<Customer>();
 var defaultIfEmptyList = emptyList.DefaultIfEmpty(new Customer(0, "Default", 0)).FirstOrDefault();
 Console.WriteLine(defaultIfEmptyList);
 
-// All other element methods without the "OrDefault" suffix throw an exception if the collection is empty
-// or if a predicate is not met.
+// All other element methods without the "OrDefault" suffix throw an exception if the collection is empty or if a
+// predicate is not met.
+
+// It is necessary to implement the ToString method in the Customer class to display the object in the console in a
+// readable format. Otherwise, the output will be the type name of the object.
+
+// Another way is to use the Select method to select the desired property of the object and display it in the console.
+// For example, Console.WriteLine(customers.Select(c => $"Name: {c.Name}, Age: {c.Age}").FirstOrDefault());
