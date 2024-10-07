@@ -1,8 +1,8 @@
 ﻿namespace Projection.Entities;
 
-internal class Category
+internal class Category(int id, string name)
 {
-    public int Id { get; set; }
-    public string Name { get; set; } = string.Empty;
+    public int Id { get; set; } = id;
+    public string Name { get; set; } = name;
     public List<Product> Products { get; set; } = [];
 }

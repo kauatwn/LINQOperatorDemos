@@ -2,9 +2,9 @@
 
 var products = new List<Product>
 {
-    new() { Id = 1, Name = "Apple", Price = 1.20 },
-    new() { Id = 2, Name = "Banana", Price = 2.40 },
-    new() { Id = 3, Name = "Cherry", Price = 3.60 }
+    new(1, "Apple", 1.20),
+    new(2, "Banana", 2.40),
+    new(3, "Cherry", 3.60)
 };
 
 // Simple projection
@@ -27,13 +27,13 @@ foreach (var product in productProjection)
 
 var categories = new List<Category>
 {
-    new() { Id = 1, Name = "Fruit", Products = products },
-    new()
+    new(1, "Fruit") { Products = products },
+    new(2, "Vegetable")
     {
-        Id = 2, Name = "Vegetable", Products =
+        Products =
         [
-            new Product { Id = 4, Name = "Carrot", Price = 0.80 },
-            new Product { Id = 5, Name = "Lettuce", Price = 1.00 }
+            new Product(4, "Carrot", 0.80),
+            new Product(5, "Lettuce", 1.00)
         ]
     }
 };
