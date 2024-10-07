@@ -30,7 +30,7 @@ foreach (var group in groupedEmployees)
     Console.WriteLine();
 }
 
-// 1.1. GroupBy with element selector. Accessing directly the first group with the key.
+// 1.1. GroupBy with element selector. Accessing directly the first group with the key
 Console.WriteLine("Accessing directly the Marketing group with the GroupBy method");
 var financeGroup = employees.GroupBy(e => e.Department, e => e.Name)
     .FirstOrDefault(g => g.Key == Department.Marketing);
@@ -61,7 +61,7 @@ foreach (var group in lookupEmployees)
     Console.WriteLine();
 }
 
-// 2.1. Accessing directly the first group with the key.
+// 2.1. Accessing directly the first group with the key
 Console.WriteLine("Accessing directly the Sales group with the ToLookup method");
 Console.WriteLine($"Department: {Department.Sales}");
 foreach (var group in lookupEmployees[Department.Sales])
