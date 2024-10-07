@@ -16,8 +16,8 @@ var projects = new List<Project>
     new("Desenvolvimento de Aplicativos", Department.IT)
 };
 
-// To union, the lists must be equal
-// Union requires Equals and GetHashCode for duplicate comparison or the use of Select to extract the desired properties
+// To union, the lists must be equal. The Union method requires Equals and GetHashCode methods for duplicate comparison
+// or the use of Select to extract the desired properties.
 var employeeDepartments = employees.Select(e => e.Department).ToList();
 var projectDepartments = projects.Select(p => p.Department).ToList();
 

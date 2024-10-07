@@ -1,6 +1,6 @@
 ﻿namespace Set.Enums;
 
-public enum Department
+internal enum Department
 {
     Finance,
     HR,
