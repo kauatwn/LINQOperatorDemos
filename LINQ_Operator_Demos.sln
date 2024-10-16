@@ -24,6 +24,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Partitioning", "src\Partiti
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Conversion", "src\Conversion\Conversion.csproj", "{37DB1AD3-3174-42D2-80C3-37B38AE065D4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Generation", "src\Generation\Generation.csproj", "{9EB4F728-F708-4D1F-A836-51187F9C2967}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,7 @@ Global
 		{1EC6268E-64D4-46EC-ABE8-831F94182D87} = {6DE51EEB-A944-475E-8C6D-4C4B69036613}
 		{43550914-3ECF-4D48-A722-E384BA5364FC} = {6DE51EEB-A944-475E-8C6D-4C4B69036613}
 		{37DB1AD3-3174-42D2-80C3-37B38AE065D4} = {6DE51EEB-A944-475E-8C6D-4C4B69036613}
+		{9EB4F728-F708-4D1F-A836-51187F9C2967} = {6DE51EEB-A944-475E-8C6D-4C4B69036613}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{65D028FF-ACA3-44B6-B8E0-02B092A318C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -87,5 +90,9 @@ Global
 		{37DB1AD3-3174-42D2-80C3-37B38AE065D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{37DB1AD3-3174-42D2-80C3-37B38AE065D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{37DB1AD3-3174-42D2-80C3-37B38AE065D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EB4F728-F708-4D1F-A836-51187F9C2967}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EB4F728-F708-4D1F-A836-51187F9C2967}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EB4F728-F708-4D1F-A836-51187F9C2967}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EB4F728-F708-4D1F-A836-51187F9C2967}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
