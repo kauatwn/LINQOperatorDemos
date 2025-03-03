@@ -17,12 +17,12 @@ var employees = new List<Employee>
 
 // 1. GroupBy
 Console.WriteLine("Accessing all groups with the GroupBy method");
-var groupedEmployees = employees.GroupBy(e => e.Department);
+IEnumerable<IGrouping<Department, Employee>> groupedEmployees = employees.GroupBy(e => e.Department);
 
-foreach (var group in groupedEmployees)
+foreach (IGrouping<Department, Employee> group in groupedEmployees)
 {
     Console.WriteLine($"Department: {group.Key}");
-    foreach (var employee in group)
+    foreach (Employee employee in group)
     {
         Console.WriteLine($"- {employee.Name}");
     }
@@ -32,13 +32,13 @@ foreach (var group in groupedEmployees)
 
 // 1.1. GroupBy with element selector. Accessing directly the first group with the key
 Console.WriteLine("Accessing directly the Marketing group with the GroupBy method");
-var financeGroup = employees.GroupBy(e => e.Department, e => e.Name)
+IGrouping<Department, string>? financeGroup = employees.GroupBy(e => e.Department, e => e.Name)
     .FirstOrDefault(g => g.Key == Department.Marketing);
 
-if (financeGroup != null)
+if (financeGroup is not null)
 {
     Console.WriteLine($"Department: {financeGroup.Key}");
-    foreach (var employee in financeGroup)
+    foreach (string employee in financeGroup)
     {
         Console.WriteLine($"- {employee}");
     }
@@ -48,12 +48,12 @@ if (financeGroup != null)
 
 // 2. ToLookup
 Console.WriteLine("Accessing all groups with the ToLookup method");
-var lookupEmployees = employees.ToLookup(e => e.Department);
+ILookup<Department, Employee> lookupEmployees = employees.ToLookup(e => e.Department);
 
-foreach (var group in lookupEmployees)
+foreach (IGrouping<Department, Employee> group in lookupEmployees)
 {
     Console.WriteLine($"Department: {group.Key}");
-    foreach (var employee in group)
+    foreach (Employee employee in group)
     {
         Console.WriteLine($"- {employee.Name}");
     }
@@ -64,7 +64,7 @@ foreach (var group in lookupEmployees)
 // 2.1. Accessing directly the first group with the key
 Console.WriteLine("Accessing directly the Sales group with the ToLookup method");
 Console.WriteLine($"Department: {Department.Sales}");
-foreach (var group in lookupEmployees[Department.Sales])
+foreach (Employee group in lookupEmployees[Department.Sales])
 {
     Console.WriteLine($"- {group.Name}");
 }

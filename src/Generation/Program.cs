@@ -1,5 +1,5 @@
 ﻿// 1. Empty
-var emptyNumbers = Enumerable.Empty<int>();
+IEnumerable<int> emptyNumbers = Enumerable.Empty<int>();
 
 if (!emptyNumbers.Any())
 {
@@ -7,9 +7,9 @@ if (!emptyNumbers.Any())
 }
 
 // 2. Range
-var rangeNumbers = Enumerable.Range(1, 10);
+IEnumerable<int> rangeNumbers = Enumerable.Range(1, 10);
 
-foreach (var number in rangeNumbers)
+foreach (int number in rangeNumbers)
 {
     Console.Write(number + " ");
 }
@@ -17,9 +17,9 @@ foreach (var number in rangeNumbers)
 Console.WriteLine();
 
 // 3. Repeat
-var repeatNumbers = Enumerable.Repeat(2, 5);
+IEnumerable<int> repeatNumbers = Enumerable.Repeat(2, 5);
 
-foreach (var number in repeatNumbers)
+foreach (int number in repeatNumbers)
 {
     Console.Write(number + " ");
 }

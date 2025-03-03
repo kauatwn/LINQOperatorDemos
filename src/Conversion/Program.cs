@@ -1,7 +1,7 @@
 ﻿using Conversion.Entities;
 
 // Lista de estudantes
-var students = new List<Student>()
+var students = new List<Student>
 {
     new(1, "Alice", 7.5),
     new(2, "Bob", 5.0),
@@ -11,9 +11,9 @@ var students = new List<Student>()
 };
 
 // 1. AsEnumerable
-var enumerableStudents = students.AsEnumerable();
+IEnumerable<Student> enumerableStudents = students.AsEnumerable();
 Console.WriteLine("Lista convertida para IEnumerable:");
-foreach (var student in enumerableStudents)
+foreach (Student student in enumerableStudents)
 {
     Console.WriteLine(student);
 }
@@ -21,10 +21,10 @@ foreach (var student in enumerableStudents)
 Console.WriteLine();
 
 // 2. AsQueryable
-var queryableStudents = students.AsQueryable();
-var query = queryableStudents.Where(s => s.Grade > 7.0);
+IQueryable<Student> queryableStudents = students.AsQueryable();
+IQueryable<Student> query = queryableStudents.Where(s => s.Grade > 7.0);
 Console.WriteLine("Lista convertida para IQueryable:");
-foreach (var student in query)
+foreach (Student student in query)
 {
     Console.WriteLine(student);
 }
@@ -32,9 +32,13 @@ foreach (var student in query)
 Console.WriteLine();
 
 // 3. Cast
-var castedStudents = students.Cast<Student>();
+// Casting explícito (redundante)
+IEnumerable<Student> castedStudents = students.Cast<Student>();
+
+// // Casting implícito (não redundante)
+// IEnumerable<Student> castedStudents = students;
 Console.WriteLine("Lista convertida para IEnumerable<Student> usando Cast:");
-foreach (var student in castedStudents)
+foreach (Student? student in castedStudents)
 {
     Console.WriteLine(student);
 }
@@ -50,9 +54,9 @@ var mixedStudents = new List<object>
     12345
 };
 
-var studentsOnly = mixedStudents.OfType<Student>();
+IEnumerable<Student> studentsOnly = mixedStudents.OfType<Student>();
 Console.WriteLine("Filtrando apenas objetos do tipo Student usando OfType:");
-foreach (var student in studentsOnly)
+foreach (Student student in studentsOnly)
 {
     Console.WriteLine(student);
 }
@@ -60,9 +64,9 @@ foreach (var student in studentsOnly)
 Console.WriteLine();
 
 // 5. ToArray
-var studentArray = students.ToArray();
+Student[] studentArray = students.ToArray();
 Console.WriteLine("Lista convertida para array:");
-foreach (var student in studentArray)
+foreach (Student student in studentArray)
 {
     Console.WriteLine(student);
 }
@@ -70,9 +74,9 @@ foreach (var student in studentArray)
 Console.WriteLine();
 
 // 6. ToDictionary
-var studentDictionary = students.ToDictionary(s => s.Id);
+Dictionary<int, Student> studentDictionary = students.ToDictionary(s => s.Id);
 Console.WriteLine("Lista convertida para Dictionary:");
-foreach (var kvp in studentDictionary)
+foreach (KeyValuePair<int, Student> kvp in studentDictionary)
 {
     Console.WriteLine($"Key: {kvp.Key}, Value: {kvp.Value}");
 }
@@ -80,9 +84,9 @@ foreach (var kvp in studentDictionary)
 Console.WriteLine();
 
 // 7. ToList
-var studentList = students.ToList();
+List<Student> studentList = students.ToList();
 Console.WriteLine("Lista convertida para List:");
-foreach (var student in studentList)
+foreach (Student student in studentList)
 {
     Console.WriteLine(student);
 }
@@ -90,12 +94,12 @@ foreach (var student in studentList)
 Console.WriteLine();
 
 // 8. ToLookup
-var studentLookup = students.ToLookup(s => s.Grade > 7.0 ? "Aprovados" : "Reprovados");
+ILookup<string, Student> studentLookup = students.ToLookup(s => s.Grade > 7.0 ? "Aprovados" : "Reprovados");
 Console.WriteLine("Lista convertida para Lookup:");
-foreach (var group in studentLookup)
+foreach (IGrouping<string, Student> group in studentLookup)
 {
     Console.WriteLine($"{group.Key}:");
-    foreach (var student in group)
+    foreach (Student student in group)
     {
         Console.WriteLine($"Id: {student.Id}, Name: {student.Name}, Grade: {student.Grade}");
     }

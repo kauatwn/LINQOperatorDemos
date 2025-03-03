@@ -8,17 +8,17 @@ var products = new List<Product>
 };
 
 // Simple projection
-var productNames = products.Select(p => p.Name);
+IEnumerable<string> productNames = products.Select(p => p.Name);
 Console.WriteLine("Projeção simples dos produtos:");
 
-foreach (var name in productNames)
+foreach (string name in productNames)
 {
     Console.WriteLine($"Nome: {name}");
 }
 
 // Complex projection
 var productProjection = products.Select(p => new { p.Id, p.Name, p.Price });
-Console.WriteLine("\nProjeção complexa dos produtos:");
+Console.WriteLine($"{Environment.NewLine}Projeção complexa dos produtos:");
 
 foreach (var product in productProjection)
 {
@@ -39,10 +39,10 @@ var categories = new List<Category>
 };
 
 // Nested projection
-var allProducts = categories.SelectMany(c => c.Products);
-Console.WriteLine("\nTodos os produtos de todas as categorias:");
+IEnumerable<Product> allProducts = categories.SelectMany(c => c.Products);
+Console.WriteLine($"{Environment.NewLine}Todos os produtos de todas as categorias:");
 
-foreach (var product in allProducts)
+foreach (Product product in allProducts)
 {
     Console.WriteLine($"Id: {product.Id}, Nome: {product.Name}, Preço: {product.Price:C}");
 }

@@ -13,32 +13,32 @@ var customers = new List<Customer>
 };
 
 // 1. FirstOrDefault
-var firstCustomer = customers.FirstOrDefault();
+Customer? firstCustomer = customers.FirstOrDefault();
 Console.WriteLine(firstCustomer);
 
 // 1.1. FirstOrDefault with predicate
-var firstCustomerOver40 = customers.FirstOrDefault(c => c.Age < 25);
+Customer? firstCustomerOver40 = customers.FirstOrDefault(c => c.Age < 25);
 Console.WriteLine(firstCustomerOver40);
 
 // 2. LastOrDefault
-var lastCustomer = customers.LastOrDefault();
+Customer? lastCustomer = customers.LastOrDefault();
 Console.WriteLine(lastCustomer);
 
 // 2.1. LastOrDefault with predicate
-var lastCustomerUnder30 = customers.LastOrDefault(c => c.Age < 30);
+Customer? lastCustomerUnder30 = customers.LastOrDefault(c => c.Age < 30);
 Console.WriteLine(lastCustomerUnder30);
 
 // 3. SingleOrDefault
-var singleCustomer = customers.SingleOrDefault(c => c.Id == 2);
+Customer? singleCustomer = customers.SingleOrDefault(c => c.Id == 2);
 Console.WriteLine(singleCustomer);
 
 // 4. ElementAtOrDefault
-var customerAt5 = customers.ElementAtOrDefault(5);
+Customer? customerAt5 = customers.ElementAtOrDefault(5);
 Console.WriteLine(customerAt5);
 
 // 5. DefaultIfEmpty
 var emptyList = new List<Customer>();
-var defaultIfEmptyList = emptyList.DefaultIfEmpty(new Customer(0, "Default", 0)).FirstOrDefault();
+Customer? defaultIfEmptyList = emptyList.DefaultIfEmpty(new Customer(0, "Default", 0)).FirstOrDefault();
 Console.WriteLine(defaultIfEmptyList);
 
 // All other element methods without the "OrDefault" suffix throw an exception if the collection is empty or if a

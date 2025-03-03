@@ -11,19 +11,19 @@ var items = new List<object>
 };
 
 // Filtering
-var products = items.OfType<Product>();
+IEnumerable<Product> products = items.OfType<Product>();
 Console.WriteLine("Lista de produtos:");
 
-foreach (var product in products)
+foreach (Product product in products)
 {
     Console.WriteLine($"Id: {product.Id}, Nome: {product.Name}, Preço: {product.Price:C}");
 }
 
 // Filtering with condition
-var expensiveProducts = items.OfType<Product>().Where(p => p.Price > 1.00);
-Console.WriteLine("\nProdutos com preço maior que R$ 1,00:");
+IEnumerable<Product> expensiveProducts = items.OfType<Product>().Where(p => p.Price > 1.00);
+Console.WriteLine($"{Environment.NewLine}Produtos com preço maior que R$ 1,00:");
 
-foreach (var product in expensiveProducts)
+foreach (Product product in expensiveProducts)
 {
     Console.WriteLine($"Id: {product.Id}, Nome: {product.Name}, Preço: {product.Price:C}");
 }
