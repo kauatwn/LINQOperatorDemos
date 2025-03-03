@@ -32,7 +32,7 @@ foreach (Person person in sortedByNameDesc)
 // 3. ThenBy
 // It orders by name in ascending order after ordering by age in ascending order.
 IOrderedEnumerable<Person> sortedByAgeAndName = people.OrderBy(p => p.Age).ThenBy(p => p.FirstName);
-Console.WriteLine("\nPessoas ordenadas pela idade e depois pelo nome em ordem crescente:");
+Console.WriteLine($"{Environment.NewLine}Pessoas ordenadas pela idade e depois pelo nome em ordem crescente:");
 
 foreach (Person person in sortedByAgeAndName)
 {
@@ -42,7 +42,7 @@ foreach (Person person in sortedByAgeAndName)
 // 4. ThenByDescending
 // It orders by name in descending order after ordering by age in descending order.
 IOrderedEnumerable<Person> sortedByAgeAndNameDesc = people.OrderByDescending(p => p.Age).ThenByDescending(p => p.FirstName);
-Console.WriteLine("\nPessoas ordenadas pela idade e depois pelo nome em ordem decrescente:");
+Console.WriteLine($"{Environment.NewLine}Pessoas ordenadas pela idade e depois pelo nome em ordem decrescente:");
 
 foreach (Person person in sortedByAgeAndNameDesc)
 {
