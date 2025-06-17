@@ -38,7 +38,7 @@ git clone https://github.com/kauatwn/LINQ_Operator_Demos.git
     docker compose build
     ```
 
-3. Execute o container desejado com base no operador:
+3. Execute o container desejado (veja a tabela abaixo):
 
     ```bash
     docker compose run --rm <operator>
@@ -46,7 +46,7 @@ git clone https://github.com/kauatwn/LINQ_Operator_Demos.git
 
 ### Executar Localmente com .NET SDK
 
-1. Navegue até o projeto do operador desejado:
+1. Navegue até o diretório do projeto correspondente (veja a tabela abaixo):
 
     ```bash
     cd src/<project>/
@@ -66,20 +66,20 @@ git clone https://github.com/kauatwn/LINQ_Operator_Demos.git
 
 ### Operadores Disponíveis
 
-| Docker `<operator>` | Localmente `<project>` |
-| ------------------- | ---------------------- |
-| `aggregate`         | `Aggregate`            |
-| `conversion`        | `Conversion`           |
-| `element`           | `Element`              |
-| `filtering`         | `Filtering`            |
-| `generation`        | `Generation`           |
-| `grouping`          | `Grouping`             |
-| `join`              | `Join`                 |
-| `partitioning`      | `Partitioning`         |
-| `projection`        | `Projection`           |
-| `quantifier`        | `Quantifier`           |
-| `set`               | `Set`                  |
-| `sorting`           | `Sorting`              |
+| Docker `<operator>` | Projeto `<project>` |
+| ------------------- | ------------------- |
+| `aggregate`         | `Aggregate`         |
+| `conversion`        | `Conversion`        |
+| `element`           | `Element`           |
+| `filtering`         | `Filtering`         |
+| `generation`        | `Generation`        |
+| `grouping`          | `Grouping`          |
+| `join`              | `Join`              |
+| `partitioning`      | `Partitioning`      |
+| `projection`        | `Projection`        |
+| `quantifier`        | `Quantifier`        |
+| `set`               | `Set`               |
+| `sorting`           | `Sorting`           |
 
 ## Estrutura do Projeto
 
