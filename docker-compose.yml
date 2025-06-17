@@ -1,0 +1,84 @@
+services:
+  aggregate:
+    build:
+      context: .
+      args:
+        PROJECT_NAME: Aggregate
+    image: linq-operator-demos-aggregate:dev
+
+  conversion:
+    build:
+      context: .
+      args:
+        PROJECT_NAME: Conversion
+    image: linq-operator-demos-conversion:dev
+
+  element:
+    build:
+      context: .
+      args:
+        PROJECT_NAME: Element
+    image: linq-operator-demos-element:dev
+
+  filtering:
+    build:
+      context: .
+      args:
+        PROJECT_NAME: Filtering
+    image: linq-operator-demos-filtering:dev
+
+  generation:
+    build:
+      context: .
+      args:
+        PROJECT_NAME: Generation
+    image: linq-operator-demos-generation:dev
+
+  grouping:
+    build:
+      context: .
+      args:
+        PROJECT_NAME: Grouping
+    image: linq-operator-demos-grouping:dev
+
+  join:
+    build:
+      context: .
+      args:
+        PROJECT_NAME: Join
+    image: linq-operator-demos-join:dev
+
+  partitioning:
+    build:
+      context: .
+      args:
+        PROJECT_NAME: Partitioning
+    image: linq-operator-demos-partitioning:dev
+
+  projection:
+    build:
+      context: .
+      args:
+        PROJECT_NAME: Projection
+    image: linq-operator-demos-projection:dev
+
+  quantifier:
+    build:
+      context: .
+      args:
+        PROJECT_NAME: Quantifier
+    image: linq-operator-demos-quantifier:dev
+
+  set:
+    build:
+      context: .
+      args:
+        PROJECT_NAME: Set
+    image: linq-operator-demos-set:dev
+
+  sorting:
+    build:
+      context: .
+      args:
+        PROJECT_NAME: Sorting
+    image: linq-operator-demos-sorting:dev
