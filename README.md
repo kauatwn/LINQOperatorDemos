@@ -44,21 +44,6 @@ git clone https://github.com/seu-usuario/LINQ_Operator_Demos.git
     docker compose run --rm <operator>
     ```
 
-    | Operadores Disponíveis (Docker) |
-    | ------------------------------- |
-    | `aggregate`                     |
-    | `conversion`                    |
-    | `element`                       |
-    | `filtering`                     |
-    | `generation`                    |
-    | `grouping`                      |
-    | `join`                          |
-    | `partitioning`                  |
-    | `projection`                    |
-    | `quantifier`                    |
-    | `set`                           |
-    | `sorting`                       |
-
 ### Executar Localmente com .NET SDK
 
 1. Navegue até o projeto do operador desejado:
@@ -66,21 +51,6 @@ git clone https://github.com/seu-usuario/LINQ_Operator_Demos.git
     ```bash
     cd src/<project>/
     ```
-
-    | Projetos Disponíveis (Local) |
-    | ---------------------------- |
-    | `Aggregate`                  |
-    | `Conversion`                 |
-    | `Element`                    |
-    | `Filtering`                  |
-    | `Generation`                 |
-    | `Grouping`                   |
-    | `Join`                       |
-    | `Partitioning`               |
-    | `Projection`                 |
-    | `Quantifier`                 |
-    | `Set`                        |
-    | `Sorting`                    |
 
 2. Restaure as dependências do projeto:
 
@@ -93,6 +63,23 @@ git clone https://github.com/seu-usuario/LINQ_Operator_Demos.git
     ```bash
     dotnet run
     ```
+
+### Operadores Disponíveis
+
+| Docker `<operator>` | Localmente `<project>` |
+| ------------------- | ---------------------- |
+| `aggregate`         | `Aggregate`            |
+| `conversion`        | `Conversion`           |
+| `element`           | `Element`              |
+| `filtering`         | `Filtering`            |
+| `generation`        | `Generation`           |
+| `grouping`          | `Grouping`             |
+| `join`              | `Join`                 |
+| `partitioning`      | `Partitioning`         |
+| `projection`        | `Projection`           |
+| `quantifier`        | `Quantifier`           |
+| `set`               | `Set`                  |
+| `sorting`           | `Sorting`              |
 
 ## Estrutura do Projeto
 
