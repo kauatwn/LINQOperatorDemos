@@ -21,7 +21,7 @@ Você pode executar o projeto de duas formas:
 Clone este repositório em sua máquina local:
 
 ```bash
-git clone https://github.com/seu-usuario/LINQ_Operator_Demos.git
+git clone https://github.com/kauatwn/LINQ_Operator_Demos.git
 ```
 
 ### Executar com Docker
