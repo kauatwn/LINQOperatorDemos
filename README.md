@@ -21,7 +21,7 @@ Você pode executar o projeto de duas formas:
 Clone este repositório em sua máquina local:
 
 ```bash
-git clone https://github.com/kauatwn/LINQ_Operator_Demos.git
+git clone https://github.com/kauatwn/LINQOperatorDemos.git
 ```
 
 ### Executar com Docker
@@ -29,7 +29,7 @@ git clone https://github.com/kauatwn/LINQ_Operator_Demos.git
 1. Navegue até a pasta raiz do projeto:
 
     ```bash
-    cd LINQ_Operator_Demos/
+    cd LINQOperatorDemos/
     ```
 
 2. Construa a imagem Docker:
@@ -86,7 +86,7 @@ git clone https://github.com/kauatwn/LINQ_Operator_Demos.git
 A estrutura do projeto está organizada da seguinte maneira:
 
 ```plaintext
-LINQ_Operator_Demos/
+LINQOperatorDemos/
 └── src/
     ├── Aggregate/
     ├── Conversion/
